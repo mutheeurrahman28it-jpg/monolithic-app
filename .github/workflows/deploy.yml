@@ -21,7 +21,6 @@ jobs:
           aws-region: ap-south-1
 
       - name: Login to Amazon ECR
-        id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
       - name: Build Docker Image
@@ -35,7 +34,7 @@ jobs:
 
       - name: Deploy to ECS Fargate
         run: |
-          aws ecs update-service \
-            --cluster monolithic-cluster \
-            --service monolithic-service \
+          aws ecs update-service ^
+            --cluster monolithic-cluster ^
+            --service monolithic-task-service-at0xk0p6 ^
             --force-new-deployment
