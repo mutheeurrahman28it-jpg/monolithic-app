@@ -34,7 +34,7 @@ jobs:
 
       - name: Deploy to ECS Fargate
         run: |
-          aws ecs update-service ^
-            --cluster monolithic-cluster ^
-            --service monolithic-task-service-at0xk0p6 ^
+          aws ecs update-service \
+            --cluster monolithic-cluster \
+            --service monolithic-task-service-at0xk0p6 \
             --force-new-deployment
