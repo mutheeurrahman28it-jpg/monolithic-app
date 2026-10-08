@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello! Monolithic Application is Running in Docker."
+    return "Hello! To-Do Application is Running on AWS Fargate."
 
 @app.route("/about")
 def about():
